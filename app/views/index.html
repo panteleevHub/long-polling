@@ -8,9 +8,7 @@
 </head>
 <body>
 	<h1>Bets logs</h1>
-	<div class="bets">
-
-	</div>
+	<div class="bets"></div>
 	<script>
 		const betsBox = document.querySelector('.bets');
 		const bets = [];
@@ -18,8 +16,8 @@
 		function loadBets(){
 			let maxId = bets.length > 0 ? bets[bets.length - 1].id : 0;
 			let controller = new AbortController();
-			let request = fetch(`/bets?id=${maxId}`, { 
-				signal: controller.signal 
+			let request = fetch(`/bets?id=${maxId}`, {
+				signal: controller.signal
 			});
 			let repeat = true;
 

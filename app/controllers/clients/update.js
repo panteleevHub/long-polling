@@ -1,6 +1,6 @@
 import { getClients } from '#app/stores/clients.js';
 
-export default (request, response, parsedUrl) => {
+export default (request, response) => {
    const clients = getClients();
    const now = new Date();
 
